@@ -1,0 +1,11 @@
+[build]
+publish = "."
+command = "echo 'Static site - no build needed'"
+
+[context.production]
+environment = { SUPABASE_URL = "", SUPABASE_KEY = "", ONESIGNAL_APP_ID = "", RESEND_KEY = "" }
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
